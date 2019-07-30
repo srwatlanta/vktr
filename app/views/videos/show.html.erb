@@ -7,11 +7,13 @@
 
 
 ***********************************************************************************<br>
+<%= render 'reviews/form', video: @video %>
+
 Comments:
-<%= @video.reviews.each do |review|%>
-<%= review.user.username   review.kill_rating %>
-<%= review.user.content%>
-<%= %>
+<% @video.reviews.each do |review|%>
+<p><%= review.user.username %>
+<%= review.kill_rating %></p>
+<p><%= review.content%></p>
 <% end %>
 
 
