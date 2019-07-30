@@ -5,6 +5,8 @@ class VideosController < ApplicationController
 
   def show
     find_video
+    @review = Review.new
+    @user = User.find_by(id: session[:user_id])
   end
 
   private
