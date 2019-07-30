@@ -27,15 +27,14 @@ class UsersController < ApplicationController
 
   def update
     find_user
-    @user = User.new(user_params)
-    @user.save
+    @user = User.update(user_params)
     redirect_to @user
   end
 
   private
   #strong params
   def user_params
-    params.require(:user).permit(:username, :email, :location, :img_url, :age)
+    params.require(:user).permit(:username, :email, :password, :location, :img_url, :age)
   end
 
   #find method
