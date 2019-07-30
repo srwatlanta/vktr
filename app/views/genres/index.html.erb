@@ -1,5 +1,5 @@
 <h1>List of Genres</h1>
 <% @genres.each do |genre|%>
     <%= link_to image_tag(genre.img_url), genre%>
-    <p><%= genre.name%></p>
+    <p><%= link_to genre.name, genre%></p>
 <% end %>
