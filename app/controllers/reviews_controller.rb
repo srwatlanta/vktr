@@ -5,12 +5,13 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(id: session[:user_id])
     @video = Video.find_by(id: params[:id])
   end
 
   def create
     @review = Review.new(review_params)
+    @user = User.find_by(id: params[:review][:user_id])
     if @review.save
       redirect_to user_path(@user)
     else 
