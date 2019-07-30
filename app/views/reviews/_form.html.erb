@@ -3,8 +3,8 @@
     <%= f.hidden_field :user_id, value: @user.id%>
     <p><%= f.label "Content" %></p>
     <p><%= f.text_area :content %></p>
-    <p><%= f.label "Kill Rating" %></p>
-    <p>Thrill: <%= f.radio_button :kill_rating, "Thrill", value: 1 %></p>
-    <p>Kill: <%= f.radio_button :kill_rating, "Kill", value: 0 %></p>
+    <p><%= f.label :kill_rating %></p>
+    <p>Thrill: <%= f.radio_button :kill_rating, value: "1" %></p>
+    <p>Kill: <%= f.radio_button :kill_rating, value: "0" %></p>
     <p><%= f.submit %></p>
 <% end %>

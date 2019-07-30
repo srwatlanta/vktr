@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-    has_many :reviews
-    has_many :videos, through: :reviews
-
-    validates_uniqueness_of :username
-    validates :username, presence: true
-
+  has_many :reviews, dependent: :destroy
+  has_many :videos, through: :reviews
+  has_secure_password
+  validates_uniqueness_of :username
+  validates :username, presence: true
 end
