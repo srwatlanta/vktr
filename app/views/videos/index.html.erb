@@ -1,0 +1,6 @@
+<%@videos.each do |video|%>
+<%= link_to image_tag(video.img_url), video %>
+<h2><%= link_to video.title, video %></h2>
+<h4><%= link_to video.artist.name, artist_path(video.artist) %></h4>
+<h4><%= link_to video.director.name, director_path(video.director) %></h4>
+<%end%>
