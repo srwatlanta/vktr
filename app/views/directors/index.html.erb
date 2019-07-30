@@ -1,0 +1,5 @@
+<h1>List of Directors </h1>
+<% @directors.each do |director|%>
+    <p><%= link_to image_tag(director.img_url), director%></p>
+    <p><%= link_to director.name, director%></p>
+<% end %>
