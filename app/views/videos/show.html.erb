@@ -7,6 +7,8 @@
 
 
 ***********************************************************************************<br>
+<%= render 'reviews/form', video: @video %>
+
 Comments:
 <%= @video.reviews.each do |review|%>
 <%= review.user.username   review.kill_rating %>
