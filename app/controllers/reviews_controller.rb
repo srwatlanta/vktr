@@ -12,9 +12,10 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @user = User.find_by(id: params[:review][:user_id])
+    @video = Video.find_by(id: params[:review][:video_id])
     if @review.save
-      redirect_to user_path(@user)
-    else 
+      redirect_to video_path(@video)
+    else
       @errors = @review.errors.full_messages
       render :new
     end
