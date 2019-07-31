@@ -2,3 +2,10 @@
 <h2>Director: <%= @director.name%> </h1>
 
 <p>Bio: <%= @director.bio%></p>
+
+<% @director.videos.each do |video| %>
+    <ul>
+    <li><%= link_to video.title, video %>
+    <%= link_to image_tag(video.img_url), video %></li>
+    </ul>
+<% end %>
