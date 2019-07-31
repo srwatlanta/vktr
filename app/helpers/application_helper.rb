@@ -10,6 +10,6 @@ module ApplicationHelper
   end
 
   def authorized
-    current_user.id == params[:id]
+    @user.id == @current_user.id
   end
 end
