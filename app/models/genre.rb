@@ -25,4 +25,4 @@ class Genre < ApplicationRecord
   # end
 end
 
-genre videos average rating sum and average
+# genre videos average rating sum and average

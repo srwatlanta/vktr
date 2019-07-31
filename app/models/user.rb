@@ -24,4 +24,16 @@ class User < ApplicationRecord
       -user.reviews.count
     end
   end
+
+  ### potential methods
+  # longest comment
+  # user with most reviews - top_reviewer/most_comments
+  # 
+  # def nicest_user #highest average_rating
+  #   User.all.each do |
+  # end
+
+  # def busiest_user #most comments
+  # end
+
 end
