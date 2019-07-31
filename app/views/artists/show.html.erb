@@ -4,3 +4,9 @@
 
     <p>Bio: <%= @artist.bio%></p>
 </div>
+
+<% @artist.videos.each do |video| %>
+    <ul><ul><ul><ul><ul>
+    <li><%= link_to video.title, video %></li>
+    </ul></ul></ul></ul></ul>
+<% end %>
