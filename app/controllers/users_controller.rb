@@ -36,6 +36,12 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
+  def destroy
+    find_user
+    @user.destroy
+    redirect_to new_user_path
+  end
+
   private
 
   #strong params
