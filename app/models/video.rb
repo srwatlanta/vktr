@@ -40,4 +40,10 @@ class Video < ApplicationRecord
       -video.reviews.count
     end
   end
+
+  def postable
+    self.reviews.select do |review|
+      review.content.length > 20
+    end
+  end
 end
