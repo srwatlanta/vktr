@@ -4,19 +4,24 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if logged_in?
+      redirect_to @current_user
+    else
+      @user = User.new
+      render :new
+    end
   end
 
   def create
     @user = User.new(user_params)
-    
+
     if @user.valid?
       @user.save
       session[:user_id] = @user.id
       redirect_to @user
     else
       errors = @user.errors.full_messages
-      flash[:errors] = errors 
+      flash[:errors] = errors
       redirect_to new_user_path
     end
   end
@@ -33,6 +38,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   #strong params
   def user_params
     params.require(:user).permit(:username, :email, :location, :img_url, :age)
