@@ -1,4 +1,4 @@
-<% if logged_in? && @user.id == @current_user.id%>
+<% if logged_in? && authorized%>
   <%= button_to "Edit", edit_user_path(@user), method: :get%>
   <%= button_to 'Delete User Profile', user_path(@user), method: :delete, remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' } %>
 <%end%>
