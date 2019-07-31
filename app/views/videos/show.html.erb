@@ -17,7 +17,7 @@ Comments:
 <p><%= review.kill_rating %></p>
 <p><%= review.content%></p>
 <% if logged_in? && @user.id == @current_user.id %>
-      <p><%= button_to "Edit this Review", edit_review_path(review) %></p>
+      <p><%= button_to "Edit this Review", edit_review_path(review), method: :get %></p>
       <p><%= button_to "Delete this Review", review_path(review), method: :delete %></p>
   <% end %>
 <% end %>

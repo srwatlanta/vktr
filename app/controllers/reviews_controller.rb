@@ -23,9 +23,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find_by(id: params[:id])
   end
 
   def update
+    @review = Review.find_by(id: params[:id])
+    @review = Review.update(review_params)
+    redirect_to @user
   end
 
   def destroy
