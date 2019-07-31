@@ -1,6 +1,18 @@
-<%@videos.each do |video|%>
-<%= link_to image_tag(video.img_url), video %>
-<h2><%= link_to video.title, video %></h2>
-<h4><%= link_to video.artist.name, artist_path(video.artist) %></h4>
-<h4><%= link_to video.director.name, director_path(video.director) %></h4>
-<%end%>
+<div class="videos_index_title">
+    <h1 class="text-center">Music Videos</h1>
+</div>
+<div class="container">
+    <div class="card-columns">
+        <%@videos.each do |video|%>
+            <div class= "card border-primary mb-3" style="max-width: 18rem;">
+                <%= link_to image_tag(video.img_url, class:"card-img-top"), video%>
+                <div class="card-body">
+                    <h4 class="card-title"><%= link_to video.title, video %></h2>
+                    <p class="card-text">Artist: <%= link_to video.artist.name, artist_path(video.artist) %></p>
+                    <p class="card-text">Director: <%= link_to video.director.name, director_path(video.director) %></p> 
+                </div>
+            </div>
+
+        <%end%>
+    </div>
+</div>

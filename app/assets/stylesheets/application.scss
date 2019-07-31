@@ -21,9 +21,50 @@
     background-repeat: no-repeat;
     }
 
-#brandlogo {
+ #brandlogo {
     color: #32ff6a;
     font-family: 'Fira Code';
-    font-weight: bold;
     font-size: 20px;
     }
+
+ footer{
+    background-color: #204969;  
+ }
+
+ .bg-img{
+    background-image: url("https://images.unsplash.com/photo-1546707012-c46675f12716?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80");
+    background-size: 100% 100%;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    z-index: -10;
+    
+ }
+
+ #jumbotrontext{
+     color: white;
+ }
+
+ //Genre images
+.genre-image{
+    height: 500px;
+    width: auto;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card{
+    width: 270px;
+}
+.card-body{
+    width: 270px;
+}
+
+a{
+    color:grey;
+}
+
