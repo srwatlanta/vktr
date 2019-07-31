@@ -1,5 +1,5 @@
 <h1> Update User </h1>
-<%= form_for @current_user do |f| %>
+<%= form_for @user do |f| %>
   <p>
   <%= f.label :username %><br>
   <%= f.text_field :username %>
@@ -24,4 +24,4 @@
   <%= f.submit %>
   </p>
   <% end %>
-<br><%= image_tag @current_user.img_url %>
+<br><%= image_tag @user.img_url %>
