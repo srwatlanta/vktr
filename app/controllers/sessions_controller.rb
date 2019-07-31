@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user
     else
-      render :new
+      flash[:errors] = ["invalid credentials"]
+      redirect_to login_path
     end
   end
 
