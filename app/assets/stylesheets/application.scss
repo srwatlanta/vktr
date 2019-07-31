@@ -12,4 +12,18 @@
  *
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import url('https://fonts.googleapis.com/css?family=Fira+Code%7CLibre+Caslon+Text&display=swap');
  @import "bootstrap";
+
+ .navbar {
+    background-color: #204969;
+    background-image: none;
+    background-repeat: no-repeat;
+    }
+
+#brandlogo {
+    color: #32ff6a;
+    font-family: 'Fira Code';
+    font-weight: bold;
+    font-size: 20px;
+    }
