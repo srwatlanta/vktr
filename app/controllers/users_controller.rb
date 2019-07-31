@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   end
 
   def new
+    if logged_in?
+      redirect_to @current_user
+    else
     @user = User.new
+    render :new
+    end
   end
 
   def create
@@ -15,14 +20,18 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      errors = @user.errors.full_messages
-      flash[:errors] = errors 
-      redirect_to new_user_path
+      @errors = @user.errors.full_messages
+      render :new
     end
   end
 
   def edit
-    find_user
+    if logged_in? && @current_user.id == params[:id]
+      @user = @current_user
+      render :edit
+    else
+      redirect_to @current_user || login_path
+    end
   end
 
   def update
