@@ -25,15 +25,9 @@ class User < ApplicationRecord
     end
   end
 
-  ### potential methods
-  # longest comment
-  # user with most reviews - top_reviewer/most_comments
-  # 
-  # def nicest_user #highest average_rating
-  #   User.all.each do |
-  # end
-
-  # def busiest_user #most comments
-  # end
-
+  def postable
+    self.reviews.select do |review|
+      review.content.length > 20
+    end
+  end
 end
