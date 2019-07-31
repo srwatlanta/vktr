@@ -8,4 +8,8 @@ module ApplicationHelper
   def logged_in?
     !!current_user
   end
+
+  def authorized
+    current_user.id == params[:id]
+  end
 end
