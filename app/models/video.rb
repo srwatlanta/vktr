@@ -16,4 +16,28 @@ class Video < ApplicationRecord
     kill_total = kill.inject { |sum, el| sum + el }.to_f / kill.size
     (kill_total * 100).to_i
   end
+
+  def self.highest_rated
+    self.all.sort_by do |video|
+      -video.average_rating
+    end
+  end
+
+  def self.lowest_rated
+    self.all.sort_by do |video|
+      video.average_rating
+    end
+  end
+
+  def self.highest_view_count
+    self.all.sort_by do |video|
+      -video.count
+    end
+  end
+
+  def self.most_reviewed
+    self.all.sort_by do |video|
+      -video.reviews.count
+    end
+  end
 end
