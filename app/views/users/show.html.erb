@@ -10,7 +10,7 @@
 </ul>
 
 <h3>Review History</h3>
-<%@user.reviews.each do |review|%>
+<%@user.postable.each do |review|%>
 <div><%= link_to image_tag(review.video.img_url), review.video %><br>
 <%= link_to review.video.title, review.video %><br>
 <%if review.kill_rating == 0%><br>
