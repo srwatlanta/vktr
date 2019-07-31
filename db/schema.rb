@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_202424) do
+ActiveRecord::Schema.define(version: 2019_07_31_144924) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_07_30_202424) do
     t.integer "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "count"
     t.index ["artist_id"], name: "index_videos_on_artist_id"
     t.index ["director_id"], name: "index_videos_on_director_id"
     t.index ["genre_id"], name: "index_videos_on_genre_id"
