@@ -10,11 +10,60 @@
   </head>
 
   <body>
-  <%if logged_in?%>
-  <%= button_to "Logout", logout_path, method: :delete %>
-  <%else%>
-  <%= button_to "Login", login_path, method: :get%>
-  <%end%>
+  <!-- A grey horizontal navbar that becomes vertical on small screens -->
+  <div class="jumbotron" style="margin-bottom:0px;">
+    <h1>VKTR</h1>
+    <p>Enhancing your music experience</p>
+  </div>
+
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- Links -->
+    <a class="navbar-brand" id="brandlogo">VKTR</a>
+    <div class="collapse navbar-collapse" id="collapse_target">
+    <ul class="navbar-nav ml-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="<%=videos_path%>">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=videos_path%>">Videos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_genres" href="<%=genres_path%>">Genres
+        <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown_genres">
+          <a class="dropdown-item" href="/genres/1">Pop</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/genres/2">Rock</a>
+          <a class="dropdown-item" href="/genres/3">Rap</a>
+          <a class="dropdown-item" href="/genres/4">Electronic</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=artists_path%>">Artists</a>
+      </li>
+      
+      <li class="nav-item">
+        <%if logged_in?%>
+          <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
+          <%else%>
+          <%= link_to "Login", login_path, method: :get, class: "nav-link"%>
+        <%end%>
+      </li>
+    </ul>
+    </div>
+  </nav>
+
+
     <%= yield %>
+  
+
   </body>
 </html>
