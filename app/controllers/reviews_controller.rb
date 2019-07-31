@@ -17,7 +17,8 @@ class ReviewsController < ApplicationController
       redirect_to video_path(@video)
     else
       @errors = @review.errors.full_messages
-      render :new
+      flash[:errors] = @errors
+      redirect_to video_path(@video)
     end
   end
 
