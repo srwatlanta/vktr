@@ -28,6 +28,12 @@ class ReviewsController < ApplicationController
   def update
   end
 
+  def destroy
+    @review = Review.find_by(id: params[:id])
+    @review.delete
+    redirect_to videos_path
+  end
+
   private
 
   def review_params
