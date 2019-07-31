@@ -22,14 +22,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="collapse_target">
+    
     <!-- Links -->
     <a class="navbar-brand">VKTR</a>
-    <span class="navbar-text">Better Music.</span>
-    <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="collapse_target">
+    <ul class="navbar-nav ml-auto">
     
       <li class="nav-item">
-        <a class="nav-link" href="<%=artists_path%>">Home</a>
+        <a class="nav-link" href="<%=videos_path%>">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%=videos_path%>">Videos</a>
@@ -52,9 +52,9 @@
       
       <li class="nav-item">
         <%if logged_in?%>
-          <%= button_to "Logout", logout_path, method: :delete %>
+          <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
           <%else%>
-          <%= button_to "Login", login_path, method: :get%>
+          <%= link_to "Login", login_path, method: :get, class: "nav-link"%>
         <%end%>
       </li>
     </ul>

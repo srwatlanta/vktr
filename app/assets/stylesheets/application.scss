@@ -13,3 +13,9 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+ .navbar {
+    background-color:teal;
+    background-image: none;
+    background-repeat: no-repeat;
+    }
