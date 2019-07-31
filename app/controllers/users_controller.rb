@@ -27,12 +27,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if logged_in? && @current_user.id == params[:id]
-      @user = @current_user
-      render :edit
-    else
-      redirect_to @current_user || login_path
-    end
+    find_user
   end
 
   def update

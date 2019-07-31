@@ -1,7 +1,25 @@
+<% if logged_in? && @user.id == @current_user.id%>
+  <%= button_to "Edit", edit_user_path(@user), method: :get%>
+<%end%>
 <h1><%= @user.username %></h1>
-<ul>
-<li><%= @user.location %></li>
-<li><%= @user.email %></li>
 <%= image_tag @user.img_url %>
-</p>
+<ul>
+<li>City: <%= @user.location %></li>
+<li>Email: <%= @user.email %></li>
+</ul>
+
+<h3>Review History</h3>
+<%@user.reviews.each do |review|%>
+<div><%= link_to image_tag(review.video.img_url), review.video %><br>
+<%= link_to review.video.title, review.video %><br>
+<%if review.kill_rating == 0%><br>
+&#x26CF;
+<%else%>
+&#x1F389;
+<%end%>
+<%=review.content%><br></div>
+<br>
+<br>
+<%end%>
+
 
