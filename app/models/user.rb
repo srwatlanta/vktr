@@ -18,4 +18,10 @@ class User < ApplicationRecord
   def video_count
     self.videos.count
   end
+
+  def self.most_reviews
+    self.all.sort_by do |user|
+      -user.reviews.count
+    end
+  end
 end
