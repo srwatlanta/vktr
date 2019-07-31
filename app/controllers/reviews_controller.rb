@@ -23,9 +23,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    find_review
   end
 
   def update
+    find_review
+    @review.update(review_params)
+    redirect_to video_path(@review.video)
   end
 
   def destroy
@@ -38,5 +42,9 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:content, :kill_rating, :user_id, :video_id)
+  end
+
+  def find_review
+    @review = Review.find_by(id: params[:id])
   end
 end
