@@ -27,13 +27,17 @@ class UsersController < ApplicationController
   end
 
   def edit
-    find_user
+    if logged_in? && @current_user.id == params[:id]
+      @user = @current_user
+      render :edit
+    else
+      redirect_to @current_user || login_path
+    end
   end
 
   def update
     find_user
-    @user = User.new(user_params)
-    @user.save
+    @user = User.update(user_params)
     redirect_to @user
   end
 
@@ -41,7 +45,7 @@ class UsersController < ApplicationController
 
   #strong params
   def user_params
-    params.require(:user).permit(:username, :email, :location, :img_url, :age)
+    params.require(:user).permit(:username, :email, :password, :location, :img_url, :age)
   end
 
   #find method
