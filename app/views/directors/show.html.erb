@@ -1,13 +1,31 @@
-<%= image_tag @director.img_url %>
-<h2>Director: <%= @director.name%> </h1>
+<br>
+<div class="text-center">
+  <h1><%= @director.name %></h1>
+  <div class="profile-image-container">
+  <%= image_tag(@director.img_url, class:"profile-image") %>
+  </div>
+  <div class="container">
+  <p>Bio: <%= @director.bio%></p>
+  <h4>Total Views: <%= @director.total_views %></h4>
+  </div>
+</div>
+<br>
 
-<p>Bio: <%= @director.bio%></p>
-<h4>Total Views: <%= @direcotor.total_views %> </h4>
+<div class="text-center">
+<h2>Videos by this director:</h2>
+</div>
+<br>
 
+<div class="container">
+    <div class="card-columns">
+        <%@director.videos.each do |video|%>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <%= link_to image_tag(video.img_url, class:"card-img-top"), video%>
+                <div class="card-body">
+                    <h4 class="card-title"><%= link_to video.title, video %></h2>
+                </div>
+            </div>
 
-<% @director.videos.each do |video| %>
-    <ul>
-    <li><%= link_to video.title, video %>
-    <%= link_to image_tag(video.img_url), video %></li>
-    </ul>
-<% end %>
+        <%end%>
+    </div>
+</div>
