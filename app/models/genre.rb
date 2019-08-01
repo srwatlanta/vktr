@@ -35,7 +35,7 @@ class Genre < ApplicationRecord
   end
 
   def artist_count
-    self.artists.count
+    self.artists.uniq.count
   end
 
   def video_count
@@ -59,6 +59,6 @@ class Genre < ApplicationRecord
     self.videos.each do |video|
       a << video.average_rating
     end
-    a.inject { |sum, el| sum + el }.to_f / a.size
+    a.inject { |sum, el| sum + el }.to_i / a.size
   end
 end

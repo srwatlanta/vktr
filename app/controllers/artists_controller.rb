@@ -5,6 +5,7 @@ class ArtistsController < ApplicationController
 
   def show
     find_artist
+    @artists = Artist.all
   end
 
   private
