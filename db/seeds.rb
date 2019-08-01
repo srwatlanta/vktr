@@ -222,3 +222,371 @@ Video.create(title: "We Found Love", img_url: "https://i.ytimg.com/vi/tg00YEETFz
 
 Video.create(title: "Vogue", img_url: "https://i.ytimg.com/vi/GuJQSAiODqI/maxresdefault.jpg", video_url: "https://www.youtube.com/watch?v=GuJQSAiODqI", artist_id: 26, genre_id: 1, director_id: 29)
 Video.create(title: "Living For Love", img_url: "https://i.ytimg.com/vi/u9h7Teiyvc8/maxresdefault.jpg", video_url: "https://www.youtube.com/watch?v=u9h7Teiyvc8", artist_id: 26, genre_id: 1, director_id: 29)
+
+
+review_data = [{
+    "id": 1,
+    "content": "After all the chaos and confusion, all you're left with is a headache.",
+    "kill_rating": 0,
+    "user_id": 14,
+    "video_id": 28
+  }, {
+    "id": 2,
+    "content": "It turned out to be about as mediocre as I feared, some surface pleasures notwithstanding.": 0,
+    "user_id": 6,
+    "video_id": 18
+  }, {
+    "id": 3,
+    "content": "ME! is not exactly an inventive music video. But it doesn't have to be. It delivers on what it promises, and not many big-studio music videos can claim the same.",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 32
+  }, {
+    "id": 4,
+    "content": "BRUNO MARS IS ON FIRE EVERY YEAR OF HIS CAREER",
+    "kill_rating": 1,
+    "user_id": 2,
+    "video_id": 38
+  }, {
+    "id": 5,
+    "content": "This is one of the greatest music videos ever made",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 36
+  }, {
+    "id": 6,
+    "content": "Great video. I think the dancing is supposed to distract us from what’s happening in the background because in America we make up these new trends which distracts us from the real problems in the world",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 16
+  }, {
+    "id": 7,
+    "content": "Anthony basically alergic to a shirt",
+    "kill_rating": 1,
+    "user_id": 16,
+    "video_id": 27
+  }, {
+    "id": 8,
+    "content": "The fact that he hired a Britney lookalike for this video is SAVAGE.",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 43
+  }, {
+    "id": 9,
+    "content": "You Need To Calm Down heightens the awfulness to a level where the crudeness is starkly illuminated for all to see.",
+    "kill_rating": 0,
+    "user_id": 11,
+    "video_id": 33
+  }, {
+    "id": 10,
+    "content": "Lady Gaga will always be the queen of weird music videos",
+    "kill_rating": 1,
+    "user_id": 19,
+    "video_id": 12
+  }, {
+    "id": 11,
+    "content": "Statues crumble because this video sucks",
+    "kill_rating": 0,
+    "user_id": 7,
+    "video_id": 44
+  }, {
+    "id": 12,
+    "content": "'ME!' is not for me! Sorry not sorry...",
+    "kill_rating": 0,
+    "user_id": 5,
+    "video_id": 32
+  }, {
+    "id": 13,
+    "content": "The direction for 'Bad Blood' is just plain bad.",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 34
+  }, {
+    "id": 14,
+    "content": "I love this video, haters need to be humble",
+    "kill_rating": 1,
+    "user_id": 4,
+    "video_id": 2
+  }, {
+    "id": 15,
+    "content": "Ye can’t compete with Drake",
+    "kill_rating": 0,
+    "user_id": 7,
+    "video_id": 30
+  }, {
+    "id": 16,
+    "content": "'Ran' hits universal themes of kinship and mortality with unerring accuracy and delicate grace.",
+    "kill_rating": 1,
+    "user_id": 1,
+    "video_id": 3
+  }, {
+    "id": 17,
+    "content": "My Cousin watched this and said, I feel like I'm watching a skittles commercial And I couldn't agree more",
+    "kill_rating": 1,
+    "user_id": 8,
+    "video_id": 32
+  }, {
+    "id": 18,
+    "content": "Such a cool video for this awesome RHCP song. Director really created a video to match the theme of the song.",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 27
+  }, {
+    "id": 19,
+    "content": "Not very good, just my opinion though.",
+    "kill_rating": 0,
+    "user_id": 1,
+    "video_id": 3
+  }, {
+    "id": 20,
+    "content": "This vidoe really could have been something special but the director chose to take it an entirely different route.",
+    "kill_rating": 0,
+    "user_id": 18,
+    "video_id": 34
+  }, {
+    "id": 21,
+    "content": "Are you kidding me ?... This is next level artistry.... ",
+    "kill_rating": 1,
+    "user_id": 9,
+    "video_id": 1
+  }, {
+    "id": 22,
+    "content": "I love the fact that rhcp filmed this vid in Mexico City, respect",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 26
+  }, {
+    "id": 23,
+    "content": "We found an amazing music video. They don't make them like this anymore.",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 46
+  }, {
+    "id": 24,
+    "content": "I'm gonna have to say see you later to this poorly made video...",
+    "kill_rating": 0,
+    "user_id": 17,
+    "video_id": 20
+  }, {
+    "id": 25,
+    "content": "Deep song, but underwhelming video.",
+    "kill_rating": 0,
+    "user_id": 3,
+    "video_id": 26
+  }, {
+    "id": 26,
+    "content": "dont really think this video matched the feel of the song",
+    "kill_rating": 0,
+    "user_id": 3,
+    "video_id": 46
+  }, {
+    "id": 27,
+    "content": "This has got to be the most perfect video for the most perfect song ever",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 36
+  }, {
+    "id": 28,
+    "content": "Seasons may change, but my love for this touching song and engaging video will last forever",
+    "kill_rating": 1,
+    "user_id": 9,
+    "video_id": 4
+  }, {
+    "id": 29,
+    "content": "i dont know why everyone likes this video, it's just kind of strange to me.",
+    "kill_rating": 0,
+    "user_id": 1,
+    "video_id": 1
+  }, {
+    "id": 30,
+    "content": "Gotta love this vintage music video. Everyone knows where they were when they first heard this classic.",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 20
+  }, {
+    "id": 31,
+    "content": "You(Drew Kirsch) need to calm down making these horrible videos",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 33
+  }, {
+    "id": 32,
+    "content": "Someday is a touching song, but the video lacks a certain something",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 45
+  }, {
+    "id": 33,
+    "content": "Vogue. Historical. Poignant. Overall excellent video.",
+    "kill_rating": 1,
+    "user_id": 6,
+    "video_id": 47
+  }, {
+    "id": 34,
+    "content": "This song got me through some really tough times, so glad the video rocks too",
+    "kill_rating": 1,
+    "user_id": 16,
+    "video_id": 26
+  }, {
+    "id": 35,
+    "content": "You've gotta be drunk to love this video",
+    "kill_rating": 0,
+    "user_id": 19,
+    "video_id": 39
+  }, {
+    "id": 36,
+    "content": "This video just brings those great vibes that the music does.",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 45
+  }, {
+    "id": 37,
+    "content": "Another T-Swift video, another gem.",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 33
+  }, {
+    "id": 38,
+    "content": "Love the game, love the video.",
+    "kill_rating": 1,
+    "user_id": 18,
+    "video_id": 13
+  }, {
+    "id": 39,
+    "content": "I have no problem with the music, but the video is trash",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 6
+  }, {
+    "id": 40,
+    "content": "This is like the best video they could have made for this song.",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 39
+  }, {
+    "id": 41,
+    "content": "Humble is this years best rap video",
+    "kill_rating": 1,
+    "user_id": 3,
+    "video_id": 2
+  }, {
+    "id": 42,
+    "content": "Drew Kirsch does it again! Hottest director in the game",
+    "kill_rating": 1,
+    "user_id": 2,
+    "video_id": 33
+  }, {
+    "id": 43,
+    "content": "Gotta be honest, I am NOT loving this video.",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 13
+  }, {
+    "id": 44,
+    "content": "Well, not really a big fan. Disappointed.",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 48
+  }, {
+    "id": 45,
+    "content": "what I would like is better music videos.",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 38
+  }, {
+    "id": 46,
+    "content": "How can a music video be so bad???",
+    "kill_rating": 0,
+    "user_id": 13,
+    "video_id": 28
+  }, {
+    "id": 47,
+    "content": "Hotline Bling is probably my favorite song, and the video is just so great.",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 31
+  }, {
+    "id": 48,
+    "content": "Meeeeeeeee likey!!!!!",
+    "kill_rating": 1,
+    "user_id": 6,
+    "video_id": 32
+  }, {
+    "id": 49,
+    "content": "The world would be better off without this video. Way to ruin a great song.",
+    "kill_rating": 0,
+    "user_id": 5,
+    "video_id": 41
+  }, {
+    "id": 50,
+    "content": "R(olling)OFL because this video is BAD",
+    "kill_rating": 0,
+    "user_id": 2,
+    "video_id": 37
+  }, {
+    "id": 51,
+    "content": "Who would not like this video?? Seriously one of the best videos I've ever seen",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 47
+  }, {
+    "id": 52,
+    "content": "Can't say I'm a fan of this music video...",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 40
+  }, {
+    "id": 53,
+    "content": "I don't know why anyone would like this video",
+    "kill_rating": 0,
+    "user_id": 16,
+    "video_id": 32
+  }, {
+    "id": 54,
+    "content": "WHO'S WATCHING IN JULY 2019??!!!",
+    "kill_rating": 1,
+    "user_id": 8,
+    "video_id": 31
+  }, {
+    "id": 55,
+    "content": "'Welcome To The Party' is an absolute treat to behold. Wouldn't be surprised if it wins some awards",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 24
+  }, {
+    "id": 56,
+    "content": "This video right here, is what I like!",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 38
+  }, {
+    "id": 57,
+    "content": "Haven't seen a music video so powerful in a very long time. Breathtakingly good!",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 30
+  }, {
+    "id": 58,
+    "content": "This is a wonderful video... NOT!",
+    "kill_rating": 0,
+    "user_id": 6,
+    "video_id": 16
+  }, {
+    "id": 59,
+    "content": "This video is representative of a time where music videos actually meant something.",
+    "kill_rating": 1,
+    "user_id": 3,
+    "video_id": 26
+  }, {
+    "id": 60,
+    "content": "Wow. Bad Romance, Bad Song, Bad Video. At least it's consistent.",
+    "kill_rating": 0,
+    "user_id": 14,
+    "video_id": 12
+  }]
+review_data.each do |review|
+    Review.create(id: review[:id], content: review[:content], kill_rating: review[:kill_rating], user_id: review[:user_id], video_id: review[:video_id])
+    # t.text "content"
+    # t.integer "kill_rating"
+    # t.integer "user_id"
+    # t.integer "video_id"
