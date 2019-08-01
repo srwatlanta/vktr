@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def edit
     find_user
     if logged_in? && authorized
-      render layout: "edit_comment"
+      render layout: "edit_user"
     else
       redirect_to user_path(@current_user)
     end
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
   def update
     find_user
-    @user = User.update(user_params)
+    @user.update(user_params)
     redirect_to @user
   end
 
