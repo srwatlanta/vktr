@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vktr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <!-- Links -->
+    <a class="navbar-brand font-weight-bold" id="brandlogo">VKTR</a>
+    <div class="collapse navbar-collapse" id="collapse_target">
+    <ul class="navbar-nav ml-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="<%=videos_path%>">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=videos_path%>">Videos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_genres" href="<%=genres_path%>">Genres
+        <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown_genres">
+          <a class="dropdown-item" href="/genres/1">Pop</a>
+          <a class="dropdown-item" href="/genres/2">Rock</a>
+          <a class="dropdown-item" href="/genres/3">Rap</a>
+          <a class="dropdown-item" href="/genres/4">Electronic</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=artists_path%>">Artists</a>
+      </li>
+      <% if logged_in?%>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=user_path(@current_user)%>">My Profile</a>
+      </li>
+      <% end %>
+      <li class="nav-item">
+        <%if logged_in?%>
+          <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
+          <%else%>
+          <%= link_to "Login", login_path, method: :get, class: "nav-link"%>
+        <%end%>
+      </li>
+    </ul>
+    </div>
+  </nav>
+  <div class="jumbotron bg-img">
+    <div class="jumbotron jumbotron-fluid" style="background-color:rgba(20,49,69,0.7);">
+      <div id="jumbotrontext">
+        <h1 class="text-center">VKTR</h1>
+        <h2 class="text-center">Edit <%=@user.username%> Comment</h2>
+        <div class="text-center">
+            <%= yield %>
+        </div>
+        <br><br>
+      </div> 
+    
+      
+        <div id="jumbotrontext">
+          <h1 class="text-center">Better than youtube music.</h1>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
