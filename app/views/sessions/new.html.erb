@@ -1,9 +1,13 @@
-<%= form_tag '/login' do%>
-<%= label_tag(:username, "Username") %>
-<%= text_field_tag(:username) %>
-<%= label_tag(:password, "Password") %>
-<%= password_field_tag(:password) %>
-<%=submit_tag "Submit"%>
-<% end %>
+<div class="text-center">
+    <%= form_tag '/login' do%>
+        <%= label_tag(:username, "Username") %>
+        <%= text_field_tag(:username) %> <br>
+        <%= label_tag(:password, "Password") %>
+        <%= password_field_tag(:password) %><br>
+        <%=submit_tag "Submit"%>
+    <% end %>
+</div>
 
-<%= button_to "Create New User", new_user_path, method: :get%>
+<div class="text-center" >
+    <%= link_to "or create new user", new_user_path, method: :get%>
+</div>
