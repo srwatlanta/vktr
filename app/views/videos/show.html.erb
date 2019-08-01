@@ -4,6 +4,7 @@
 <h2> Artist: <%= link_to @video.artist.name, artist_path(@video.artist) %> </h2>
 <h4> Genre: #<%= link_to @video.genre.name, genre_path(@video.genre) %> </h4>
 <h4> Director: <%= link_to @video.director.name, director_path(@video.director) %> </h4>
+<h4> Views: <%= @video.count %> </h4>
 
 
 ***********************************************************************************<br>
