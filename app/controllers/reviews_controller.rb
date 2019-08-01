@@ -23,13 +23,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.find_by(id: params[:id])
+    find_review
   end
 
   def update
-    @review = Review.find_by(id: params[:id])
-    @review = Review.update(review_params)
-    redirect_to @user
+    find_review
+    @review.update(review_params)
+    redirect_to video_path(@review.video)
   end
 
   def destroy
