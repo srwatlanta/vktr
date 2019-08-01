@@ -8,9 +8,8 @@ class UsersController < ApplicationController
       redirect_to @current_user
     else
       @user = User.new
-      render :new, layout: 'edit_comment'
+      render :new, layout: "edit_comment"
     end
-    
   end
 
   def create
@@ -25,12 +24,15 @@ class UsersController < ApplicationController
       flash[:errors] = errors
       redirect_to new_user_path
     end
-    
   end
 
   def edit
     find_user
-    render layout: 'edit_comment'
+    if logged_in? && authorized
+      render layout: "edit_comment"
+    else
+      redirect_to user_path(@current_user)
+    end
   end
 
   def update
