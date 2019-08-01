@@ -21,4 +21,10 @@ class Director < ApplicationRecord
   def genre_count
     self.genres.count
   end
+
+  # def highest_rated
+  #   self.videos.each do |video|
+  #     video.kill_rating
+  #   end
+  # end
 end
