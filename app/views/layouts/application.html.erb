@@ -51,7 +51,11 @@
       <li class="nav-item">
         <a class="nav-link" href="<%=artists_path%>">Artists</a>
       </li>
-      
+      <% if logged_in?%>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=user_path(@current_user)%>">My Profile</a>
+      </li>
+      <% end %>
       <li class="nav-item">
         <%if logged_in?%>
           <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
