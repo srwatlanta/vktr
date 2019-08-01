@@ -25,6 +25,10 @@ class User < ApplicationRecord
     end
   end
 
+  def self.most_reviews_top_five
+    self.top_five(self.most_reviews)
+  end
+
   def postable
     self.reviews.select do |review|
       review.content.length > 20
