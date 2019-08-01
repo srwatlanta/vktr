@@ -7,6 +7,8 @@
 <h4> Genre: #<%= link_to @video.genre.name, genre_path(@video.genre) %> </h4>
 <h4> Director: <%= link_to @video.director.name, director_path(@video.director) %> </h4>
 <h4> Views: <%= @video.count %> </h4>
+<h4> Total Reviews: <%= @video.total_reviews %> </h4>
+<h4> Average Rating: <%= @video.average_rating %> </h4>
 </div>
 <hr style="border:solid 2px  #32ff6a;; width:75%"/>
 
