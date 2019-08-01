@@ -24,6 +24,7 @@ class ReviewsController < ApplicationController
 
   def edit
     find_review
+    render layout: "edit_comment"
   end
 
   def update
