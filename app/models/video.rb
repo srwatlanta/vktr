@@ -12,9 +12,13 @@ class Video < ApplicationRecord
   end
 
   def average_rating
-    kill = self.reviews.map(&:kill_rating)
-    kill_total = kill.inject { |sum, el| sum + el }.to_f / kill.size
-    (kill_total * 100).to_i
+    if self.reviews.exists?
+      kill = self.reviews.map(&:kill_rating)
+      kill_total = kill.inject { |sum, el| sum + el }.to_f / kill.size
+      (kill_total * 100).to_i
+    else
+      return 0
+    end
   end
 
   def self.highest_rated
@@ -23,10 +27,18 @@ class Video < ApplicationRecord
     end
   end
 
+  def self.highest_rated_top_five
+    self.top_five(self.highest_rated)
+  end
+
   def self.lowest_rated
     self.all.sort_by do |video|
       video.average_rating
     end
+  end
+
+  def self.lowest_rated_top_five
+    self.top_five(self.lowest_rated)
   end
 
   def self.highest_view_count
@@ -35,10 +47,18 @@ class Video < ApplicationRecord
     end
   end
 
+  def self.highest_view_count_top_five
+    self.top_five(self.highest_view_count)
+  end
+
   def self.most_reviewed
     self.all.sort_by do |video|
       -video.reviews.count
     end
+  end
+
+  def self.most_reviewed_top_five
+    self.top_five(self.most_reviewed)
   end
 
   def postable
