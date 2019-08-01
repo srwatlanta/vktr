@@ -1,5 +1,16 @@
-<h1>List of Directors </h1>
-<% @directors.each do |director|%>
-    <p><%= link_to image_tag(director.img_url), director%></p>
-    <p><%= link_to director.name, director%></p>
-<% end %>
+<div class="text-center">
+    <h1>Directors</h1>
+</div>
+<br>
+<div class="container">
+    <div class="card-columns">
+        <%@directors.each do |director|%>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <%= link_to image_tag(director.img_url, class:"card-img-top"), director%>
+                <div class="card-body">
+                    <h4 class="card-title"><%= link_to director.name, director %></h2>
+                </div>
+            </div>
+        <%end%>
+    </div>
+</div>

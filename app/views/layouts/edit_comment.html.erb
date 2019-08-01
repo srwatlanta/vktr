@@ -10,16 +10,7 @@
   </head>
 
   <body>
-  <!-- A grey horizontal navbar that becomes vertical on small screens -->
-  <div class="jumbotron bg-img" style="margin-bottom:0px;">
-    <div id="jumbotrontext">
-      <h1>VKTR</h1>
-      <p>Enhancing your music experience</p>
-    </div>
-    
-  </div>
-
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 
     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
       <span class="navbar-toggler-icon"></span>
@@ -32,7 +23,7 @@
     <ul class="navbar-nav ml-auto">
     
       <li class="nav-item">
-        <a class="nav-link" href="<%=root_path%>">Home</a>
+        <a class="nav-link" href="<%=videos_path%>">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%=videos_path%>">Videos</a>
@@ -51,9 +42,6 @@
       <li class="nav-item">
         <a class="nav-link" href="<%=artists_path%>">Artists</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%=directors_path%>">Directors</a>
-      </li>
       <% if logged_in?%>
       <li class="nav-item">
         <a class="nav-link" href="<%=user_path(@current_user)%>">My Profile</a>
@@ -69,45 +57,22 @@
     </ul>
     </div>
   </nav>
-
-
-    <%= yield %>
-  
-  
-    <!-- Footer -->
-  <footer class="page-footer font-small blue pt-4">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center">
-          
-          <h5 class="text-uppercase">VKTR</h5>
-          <!-- Links -->
-          
-          <ul class="list-unstyled">
-            <li>
-              <a href="<%=videos_path%>">Videos</a>  |   
-              <a href="<%=artists_path%>">Artists</a>  | 
-              <a href="<%=root_path%>">Home</a>  
-            </li>
-            <li>
-              <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-              <a href="https://www.twitter.com" class="fa fa-twitter"></a>
-              <a href="https://www.instagram.com" class="fa fa-instagram"></a>
-            </li>
-          </ul>
-
+  <div class="jumbotron bg-img">
+    <div class="jumbotron jumbotron-fluid" style="background-color:rgba(20,49,69,0.7);">
+      <div id="jumbotrontext">
+        <h1 class="text-center">VKTR</h1>
+        <h2 class="text-center">Edit Comment</h2>
+        <div class="text-center">
+            <%= yield %>
+        </div>
+        <br><br>
+      </div> 
+    
+      
+        <div id="jumbotrontext">
+          <h1 class="text-center">Better than youtube music.</h1>
+        </div> 
+      </div>
     </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-      <a href="/videos"> Vktr.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  
-
   </body>
-  
 </html>
