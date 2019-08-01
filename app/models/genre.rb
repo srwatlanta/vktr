@@ -2,6 +2,7 @@ class Genre < ApplicationRecord
   has_many :videos
   has_many :artists, through: :videos
   has_many :directors, through: :videos
+  has_many :reviews, through: :videos
 
   def artist_count
     self.artists.count
@@ -24,5 +25,3 @@ class Genre < ApplicationRecord
   #   end
   # end
 end
-
-# genre videos average rating sum and average

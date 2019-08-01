@@ -2,6 +2,7 @@ class Director < ApplicationRecord
   has_many :videos
   has_many :artists, through: :videos
   has_many :genres, through: :videos
+  has_many :reviews, through: :videos
 
   def self.alphabetize
     self.all.sort_by do |director|
