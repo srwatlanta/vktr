@@ -34,5 +34,8 @@ class Artist < ApplicationRecord
   end
 
   def self.most_viewed
+    self.all.sort_by do |artist|
+      -artist.total_views
+    end
   end
 end
