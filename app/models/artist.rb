@@ -10,6 +10,36 @@ class Artist < ApplicationRecord
     end
   end
 
+  def self.best_reviewed
+    self.all.sort_by do |artist|
+      -artist.average_review
+    end
+  end
+
+  def self.best_reviewed_top_five
+    self.top_five(self.best_reviewed)
+  end
+
+  def self.worst_reviewed
+    self.all.sort_by do |artist|
+      artist.average_review
+    end
+  end
+
+  def self.worst_reviewed_top_five
+    self.top_five(self.worst_reviewed)
+  end
+
+  def self.most_viewed
+    self.all.sort_by do |artist|
+      -artist.total_views
+    end
+  end
+
+  def self.most_viewed_top_five
+    self.top_five(self.most_viewed)
+  end
+
   def genre_count
     self.genres.count
   end
@@ -30,12 +60,11 @@ class Artist < ApplicationRecord
     a
   end
 
-  def self.best_rating
-  end
-
-  def self.most_viewed
-    self.all.sort_by do |artist|
-      -artist.total_views
+  def average_review
+    a = []
+    self.videos.each do |video|
+      a << video.average_rating
     end
+    a.inject { |sum, el| sum + el }.to_f / a.size
   end
 end
