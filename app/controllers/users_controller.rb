@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       redirect_to @current_user
     else
       @user = User.new
-      render :new, layout: "edit_comment"
+      render :new, layout: "new_user"
     end
   end
 
