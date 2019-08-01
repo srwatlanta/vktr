@@ -2,6 +2,9 @@
     <h1><%= @genre.name%></h1>
     <%= image_tag @genre.img_url, class: "genre-image "%>
     <h4>Total Views: <%= @genre.total_views %> </h4>
+    <h4>Total Videos: <%= @genre.video_count %> </h4>
+    <h4>Artists In Genre: <%= @genre.artist_count %> </h4>
+    <h4>Average Review: <%= @genre.average_review %> </h4>
 
 </div>
 
