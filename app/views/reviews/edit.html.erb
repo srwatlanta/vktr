@@ -1,12 +1,12 @@
     <%= form_for @review do |f| %>
-    <p><%= f.label "Content" %></p>
-    <p><%= f.text_area :content %></p>
+        <p><%= f.label "Content" %></p>
+        <p><%= f.text_area :content %></p>
 
-    <%= f.label :kill_rating %><br />
-    <%= f.label :kill_rating, "Thrill", :value => 1  %>
-    <%= f.radio_button :kill_rating, 1 %>
-    <%= f.label :kill_rating, "Kill", :value => 0 %>
-    <%= f.radio_button :kill_rating, 0%>
-
-    <p><%= f.submit %></p>
+        <%= f.label :kill_rating %><br />
+        <%= f.label :kill_rating, "Thrill", :value => 1  %>
+        <%= f.radio_button :kill_rating, 1 %>
+        <%= f.label :kill_rating, "Kill", :value => 0 %>
+        <%= f.radio_button :kill_rating, 0%>
+        <br>
+        <%= f.submit "Update Review", class: "rounded"%>
     <%end%>
