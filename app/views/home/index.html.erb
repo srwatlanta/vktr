@@ -128,7 +128,7 @@
                 <h2 class="card-title text-center">Worst Reviewed Director</h2>
                 <ul class="list-group">
                 <%@worst_rated_director.each do |director|%>
-                <a href="<%director_path(director)%>" class="list-group-item"><%=director.name%></a>
+                <a href="<%=director_path(director)%>" class="list-group-item"><%=director.name%></a>
                 <%end%>
                 </ul>
             </div>
@@ -158,7 +158,7 @@
                 <h2 class="card-title text-center">Worst Reviewed Artist</h2>
                 <ul class="list-group">
                 <%@worst_rated_artist.each do |artist|%>
-                <a href="<%artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
+                <a href="<%=artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
                 <%end%>
                 </ul>
             </div>
@@ -187,7 +187,7 @@
                 <h2 class="card-title text-center">Worst Reviewed Genre</h2>
                 <ul class="list-group">
                 <%@worst_rated_genre.each do |genre|%>
-                <a href="<%genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
+                <a href="<%=genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
                 <%end%>
                 </ul>
             </div>

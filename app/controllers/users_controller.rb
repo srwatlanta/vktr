@@ -28,6 +28,11 @@ class UsersController < ApplicationController
 
   def edit
     find_user
+    if logged_in? && authorized
+      render :edit
+    else
+      redirect_to user_path(@current_user)
+    end
   end
 
   def update

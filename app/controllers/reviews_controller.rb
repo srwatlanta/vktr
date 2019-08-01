@@ -24,7 +24,11 @@ class ReviewsController < ApplicationController
 
   def edit
     find_review
-    render layout: "edit_comment"
+    if logged_in? && @current_user == @review.user.id
+      render layout: "edit_comment"
+    else
+      redirect_to user_path(@current_user)
+    end
   end
 
   def update
