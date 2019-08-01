@@ -6,9 +6,13 @@ class User < ApplicationRecord
   validates :username, :email, :presence => { :message => "cannot be blank" }
 
   def average_rating
-    kill = self.reviews.map(&:kill_rating)
-    kill_total = kill.inject { |sum, el| sum + el }.to_f / kill.size
-    (kill_total * 100).to_i
+    if self.reviews.exists?
+      kill = self.reviews.map(&:kill_rating)
+      kill_total = kill.inject { |sum, el| sum + el }.to_f / kill.size
+      (kill_total * 100).to_i
+    else
+      return 0
+    end
   end
 
   def review_count
@@ -33,5 +37,25 @@ class User < ApplicationRecord
     self.reviews.select do |review|
       review.content.length > 20
     end
+  end
+
+  def self.highest_ratings
+    self.all.sort_by do |user|
+      -user.average_rating
+    end
+  end
+
+  def self.highest_ratings_top_five
+    self.top_five(self.highest_ratings)
+  end
+
+  def self.lowest_ratings
+    self.all.sort_by do |user|
+      user.average_rating
+    end
+  end
+
+  def self.lowest_ratings_top_five
+    self.top_five(self.lowest_ratings)
   end
 end

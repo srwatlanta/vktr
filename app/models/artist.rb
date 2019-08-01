@@ -21,4 +21,18 @@ class Artist < ApplicationRecord
   def director_count
     self.directors.count
   end
+
+  def total_views
+    a = 0
+    self.videos.each do |video|
+      a += video.count
+    end
+    a
+  end
+
+  def self.best_rating
+  end
+
+  def self.most_viewed
+  end
 end
