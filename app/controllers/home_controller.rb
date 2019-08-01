@@ -20,5 +20,8 @@ class HomeController < ApplicationController
     @worst_rated_genre = Genre.worst_reviewed_top_five
     @top_rated_genre = Genre.best_reviewed_top_five
     @top_viewed_genre = Genre.most_viewed_top_five
+
+    render layout: 'home_layout'
   end
+
 end
