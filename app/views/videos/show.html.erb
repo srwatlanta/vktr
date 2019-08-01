@@ -28,7 +28,7 @@ Comments:
 <p><%= review.content%></p>
 <% if logged_in? && review.user.id == @current_user.id %>
       <%= link_to "Edit this Review", edit_review_path(review), method: :get %>
-      <%= button_to "Delete this Review", review_path(review), method: :delete, class: "btn-danger" %>
+      <%= button_to "Delete this Review", review_path(review), method: :delete, class: "btn-danger rounded" %>
       <br>
   <% end %>
 <% end %>
