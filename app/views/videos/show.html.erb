@@ -1,3 +1,5 @@
+<br>
+<div class="text-center">
 <iframe height='450' width= '750' src='https://www.youtube.com/embed/<%= @video.video_url_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
 
 <h1> <%= @video.title %> </h1>
@@ -5,13 +7,18 @@
 <h4> Genre: #<%= link_to @video.genre.name, genre_path(@video.genre) %> </h4>
 <h4> Director: <%= link_to @video.director.name, director_path(@video.director) %> </h4>
 <h4> Views: <%= @video.count %> </h4>
+<h4> Total Reviews: <%= @video.total_reviews %> </h4>
+<h4> Average Rating: <%= @video.average_rating %> </h4>
+</div>
+<hr style="border:solid 2px  #32ff6a;; width:75%"/>
 
-
-***********************************************************************************<br>
+<div class="text-center">
 <%if logged_in?%>
 <%= render 'reviews/form', video: @video %>
 <%end%>
+</div>
 
+<div class="text-center">
 Comments:
 <% @video.postable.each do |review|%>
 <p><%= review.user.username %>
@@ -22,10 +29,10 @@ Comments:
 <%end%>
 <p><%= review.content%></p>
 <% if logged_in? && review.user.id == @current_user.id %>
-      <%= button_to "Delete this Review", review_path(review), method: :delete %>
-      <%= button_to "Edit this Review", edit_review_path(review), method: :get %>
-
+      <%= link_to "Edit this Review", edit_review_path(review), method: :get %>
+      <%= button_to "Delete this Review", review_path(review), method: :delete, class: "btn-danger rounded" %>
+      <br>
   <% end %>
 <% end %>
-
+</div>
 

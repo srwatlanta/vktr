@@ -1,30 +1,57 @@
+
+<div class="text-center">
+  <h1><%= @user.username %></h1>
+  <div class="profile-image-container">
+  <%= image_tag(@user.img_url, class:"profile-image") %>
+  </div>
+</div>
+
+<div class="text-center">
+  
+  <p>City: <%= @user.location %></p>
+  <p>Email: <%= @user.email %></p>
+  <p>Total Reviews: <%= @user.review_count %></p>
+  <p>Average Rating: <%= @user.average_rating %></p>
+ 
+</div>
+
+
+<div class="text-center">
 <% if logged_in? && authorized%>
-  <%= button_to "Edit", edit_user_path(@user), method: :get%>
-  <%= button_to 'Delete User Profile', user_path(@user), method: :delete, remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' } %>
+  <%= button_to "Edit", edit_user_path(@user), method: :get, class: "rounded"%> <br>
+  <%= button_to 'Delete User Profile', user_path(@user), method: :delete, remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class:"btn-danger rounded" %>
 <%end%>
-<h1><%= @user.username %></h1>
-<%= image_tag @user.img_url %>
-<ul>
-<li>City: <%= @user.location %></li>
-<li>Email: <%= @user.email %></li>
-</ul>
-
-<h3>Review History</h3>
-<%@user.postable.each do |review|%>
-<div><%= link_to image_tag(review.video.img_url), review.video %><br>
-<%= link_to review.video.title, review.video %><br>
-<%if review.kill_rating == 0%><br>
-&#x26CF;
-<%else%>
-&#x1F389;
-<%end%>
-<%=review.content%><br></div>
+</div>
 <br>
-  <% if logged_in? && @user.id == @current_user.id %>
-      <%= button_to "Delete this Review", review_path(review), method: :delete %>
-      <%= button_to "Edit this Review", edit_review_path(review), method: :get %>
-  <% end %>
-<br>
-<%end%>
 
+
+<div class="text-center">
+  <h2>Review History</h2>
+
+
+  <div class="container">
+    <div class="card-columns">
+    <%@user.postable.each do |review|%>  
+
+      <div class= "card border-primary mb-3" style="max-width: 18rem;">
+        <%= link_to image_tag(review.video.img_url, class:"profile-reviewed-video card-img-top"), review.video %><br>
+        <div class="card-body">
+          <h2><%= link_to review.video.title, review.video %></h2><br>
+          <%if review.kill_rating == 0%><br>
+          <h1>&#x26CF;</h1>
+          <%else%>
+          <h2>&#x1F389;</h1>
+          <%end%>
+          <%=review.content%><br>
+          <br>
+          <% if logged_in? && @user.id == @current_user.id %>
+            <%= link_to "Edit this Review", edit_review_path(review), method: :get %> 
+            <%= button_to "Delete", review_path(review), method: :delete, class: "btn-danger rounded" %>
+          <% end %>
+        </div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>
 

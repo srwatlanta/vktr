@@ -1,10 +1,19 @@
-<div>
+<div class="text-center">
     <h1><%= @genre.name%></h1>
     <%= image_tag @genre.img_url, class: "genre-image "%>
-    <p>Bio: <%= @genre.bio%></p>
     <h4>Total Views: <%= @genre.total_views %> </h4>
 
 </div>
+
+<div class="text-center">
+    <h5><%= @genre.bio%></h5>
+</div>
+<hr style="border:solid 2px  #32ff6a;;"/>
+
+<div class="text-center">
+<h1>Videos</h1>
+</div>
+
 <div class="container">
     <div class="card-columns">
         <% @genre.videos.each do |video| %>
