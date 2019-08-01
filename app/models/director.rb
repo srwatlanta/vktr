@@ -10,6 +10,35 @@ class Director < ApplicationRecord
     end
   end
 
+  def self.most_viewed
+    self.all.sort_by do |director|
+      -director.total_views
+    end
+  end
+
+  def self.most_viewed_top_five
+    self.top_five(self.most_viewed)
+  end
+  def self.best_reviewed
+    self.all.sort_by do |director|
+      -director.average_review
+    end
+  end
+
+  def self.best_reviewed_top_five
+    self.top_five(self.best_reviewed)
+  end
+
+  def self.worst_reviewed
+    self.all.sort_by do |director|
+      director.average_review
+    end
+  end
+
+  def self.worst_reviewed_top_five
+    self.top_five(self.worst_reviewed)
+  end
+
   def artist_count
     self.artists.count
   end
@@ -30,9 +59,11 @@ class Director < ApplicationRecord
     a
   end
 
-  # def highest_rated
-  #   self.videos.each do |video|
-  #     video.kill_rating
-  #   end
-  # end
+  def average_review
+    a = []
+    self.videos.each do |video|
+      a << video.average_rating
+    end
+    a.inject { |sum, el| sum + el }.to_f / a.size
+  end
 end

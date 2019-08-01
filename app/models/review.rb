@@ -4,7 +4,7 @@ class Review < ApplicationRecord
 
   validates :kill_rating, presence: true
   # validates :content, presence: true
-  validates :content, length: 20..500, allow_blank: true
+  validates :content, length: 20..500
 
   def self.postable
     self.all.select do |review|
