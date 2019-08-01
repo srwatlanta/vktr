@@ -232,7 +232,8 @@ review_data = [{
     "video_id": 28
   }, {
     "id": 2,
-    "content": "It turned out to be about as mediocre as I feared, some surface pleasures notwithstanding.": 0,
+    "content": "It turned out to be about as mediocre as I feared, some surface pleasures notwithstanding.",
+    "kill_rating": 0,
     "user_id": 6,
     "video_id": 18
   }, {
@@ -586,7 +587,10 @@ review_data = [{
   }]
 review_data.each do |review|
     Review.create(id: review[:id], content: review[:content], kill_rating: review[:kill_rating], user_id: review[:user_id], video_id: review[:video_id])
-    # t.text "content"
-    # t.integer "kill_rating"
-    # t.integer "user_id"
-    # t.integer "video_id"
+end
+
+
+# 2.6.1 :008 > Video.all.each do |video|
+#   2.6.1 :009 >     video.count = 0
+#   2.6.1 :010?>   video.save
+#   2.6.1 :011?>   end
