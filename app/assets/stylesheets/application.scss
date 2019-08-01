@@ -13,7 +13,9 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import url('https://fonts.googleapis.com/css?family=Fira+Code%7CLibre+Caslon+Text&display=swap');
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
  @import "bootstrap";
+
 
  .navbar {
     background-color: #204969;
@@ -30,7 +32,19 @@
  footer{
     background-color: #204969;  
  }
-
+ // footer icons social media
+ .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+ // adds hover
+ .fa:hover {
+    opacity: 0.7;
+  }
  .bg-img{
     background-image: url("https://images.unsplash.com/photo-1546707012-c46675f12716?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80");
     background-size: 100% 100%;
@@ -58,10 +72,10 @@
 }
 
 .card{
-    width: 270px;
+    width: 300px;
 }
 .card-body{
-    width: 270px;
+    width: 300px;
 }
 
 a{

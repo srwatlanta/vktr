@@ -16,6 +16,14 @@ class Genre < ApplicationRecord
     self.directors.count
   end
 
+  def total_views
+    a = 0
+    self.videos.each do |video|
+      a += video.count
+    end
+    a
+  end
+
   # def self.highest_rated
   #   self.all.each do |genre|
   #     genre.videos.each do |video|

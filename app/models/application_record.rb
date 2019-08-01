@@ -1,4 +1,4 @@
-require "pry"
+# require "pry"
 
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
