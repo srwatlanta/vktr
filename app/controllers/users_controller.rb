@@ -8,8 +8,9 @@ class UsersController < ApplicationController
       redirect_to @current_user
     else
       @user = User.new
-      render :new
+      render :new, layout: 'edit_comment'
     end
+    
   end
 
   def create
@@ -24,10 +25,12 @@ class UsersController < ApplicationController
       flash[:errors] = errors
       redirect_to new_user_path
     end
+    
   end
 
   def edit
     find_user
+    render layout: 'edit_comment'
   end
 
   def update

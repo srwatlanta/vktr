@@ -1,6 +1,7 @@
+
 <div class="text-center">
     <h1 class="display-2"> Welcome to VKTR. </h1>
-    <h2 class="text-muted"> The best new music video review site.</h2>
+    <p class="text-muted"> The best new music video review site.</p>
 </div>
 <br>
 
@@ -52,164 +53,176 @@
     <h3> Music Video Rankings </h3>
 </div>
 <br>
-    <div class="card-columns">
+    <div class="row">
+    <div class="col-sm">
         <div class="card border-primary mb-3">
             <br>
-            <br>
-            <h2 class="card-title text-center">Most Viewed Videos</h2>
+            <h6 class="card-title text-center">Most Viewed Videos</h6>
             <ul class="list-group">
             <%@top_viewed_video.each do |video|%>
             <a href="<%=video_path(video)%>" class="list-group-item"><%=video.title%></a>
             <%end%>
             </ul>
         </div>
+
         <div class="card border-primary mb-3">
             <br>
-            <h2 class="card-title text-center">Most Reviewed Videos</h2>
+            <h6 class="card-title text-center">Most Reviewed Videos</h6>
             <ul class="list-group">
             <%@most_reviewed_video.each do |video|%>
             <a href="<%=video_path(video)%>" class="list-group-item"><%=video.title%></a>
             <%end%>
             </ul>
         </div>
+
         <div class="card border-primary mb-3">
             <br>
-            <h2 class="card-title text-center">Highest Rated Videos</h2>
+            <h6 class="card-title text-center">Highest Rated Videos</h6>
             <ul class="list-group">
             <%@highest_rated_video.each do |video|%>
             <a href="<%=video_path(video)%>" class="list-group-item"><%=video.title%></a>
             <%end%>
             </ul>
         </div>
+    </div>
+
+    <div class="col-sm">
         <div class="card border-primary mb-3">
             <br>
-            <h2 class="card-title text-center">Lowest Rated Videos</h2>
+            <h6 class="card-title text-center">Lowest Rated Videos</h6>
             <ul class="list-group">
             <%@lowest_rated_video.each do |video|%>
             <a href="<%=video_path(video)%>" class="list-group-item"><%=video.title%></a>
             <%end%>
             </ul>
         </div>
-   
-
-        <div class="user-container">
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">User With Most Reviews</h2>
-                <ul class="list-group">
-                <%@most_reviews_user.each do |user|%>
-                <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">User With Highest Average Rating</h2>
-                <ul class="list-group">
-                <%@nicest_user.each do |user|%>
-                <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">User With Lowest Average Rating</h2>
-                <ul class="list-group">
-                <%@meanest_user.each do |user|%>
-                <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
-                <%end%>
-                </ul>
-            </div>
+        
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">User With Most Reviews</h6>
+            <ul class="list-group">
+            <%@most_reviews_user.each do |user|%>
+            <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
+            <%end%>
+            </ul>
+        </div>
+            
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">User With Highest Average Rating</h6>
+            <ul class="list-group">
+            <%@nicest_user.each do |user|%>
+            <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
+            <%end%>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">User With Lowest Average Rating</h6>
+            <ul class="list-group">
+            <%@meanest_user.each do |user|%>
+            <a href="<%=user_path(user)%>" class="list-group-item"><%=user.username%></a>
+            <%end%>
+            </ul>
         </div>
 
-        <div class="director-container">
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Worst Reviewed Director</h2>
-                <ul class="list-group">
-                <%@worst_rated_director.each do |director|%>
-                <a href="<%director_path(director)%>" class="list-group-item"><%=director.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Best Reviewed Director</h2>
-                <ul class="list-group">
-                <%@top_rated_director.each do |director|%>
-                <a href="<%=director_path(director)%>" class="list-group-item"><%=director.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Most Viewed Director</h2>
-                <ul class="list-group">
-                <%@top_viewed_director.each do |director|%>
-                <a href="<%=director_path(director)%>" class="list-group-item"><%=director.name%></a>
-                <%end%>
-                </ul>
-            </div>
+
+       
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Worst Reviewed Director</h6>
+            <ul class="list-group">
+            <%@worst_rated_director.each do |director|%>
+            <a href="<%director_path(director)%>" class="list-group-item"><%=director.name%></a>
+            <%end%>
+            </ul>
+        </div>
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Best Reviewed Director</h6>
+            <ul class="list-group">
+            <%@top_rated_director.each do |director|%>
+            <a href="<%=director_path(director)%>" class="list-group-item"><%=director.name%></a>
+            <%end%>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm">
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Most Viewed Director</h6>
+            <ul class="list-group">
+            <%@top_viewed_director.each do |director|%>
+            <a href="<%=director_path(director)%>" class="list-group-item"><%=director.name%></a>
+            <%end%>
+            </ul>
+        </div>
+    
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Worst Reviewed Artist</h6>
+            <ul class="list-group">
+            <%@worst_rated_artist.each do |artist|%>
+            <a href="<%artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
+            <%end%>
+            </ul>
+        </div>
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Best Reviewed Artist</h6>
+            <ul class="list-group">
+            <%@top_rated_artist.each do |artist|%>
+            <a href="<%=artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
+            <%end%>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Most Viewed Artist</h6>
+            <ul class="list-group">
+            <%@top_viewed_artist.each do |artist|%>
+            <a href="<%=artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
+            <%end%>
+            </ul>
         </div>
 
-        <div class="artist-container">
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Worst Reviewed Artist</h2>
-                <ul class="list-group">
-                <%@worst_rated_artist.each do |artist|%>
-                <a href="<%artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Best Reviewed Artist</h2>
-                <ul class="list-group">
-                <%@top_rated_artist.each do |artist|%>
-                <a href="<%=artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Most Viewed Artist</h2>
-                <ul class="list-group">
-                <%@top_viewed_artist.each do |artist|%>
-                <a href="<%=artist_path(artist)%>" class="list-group-item"><%=artist.name%></a>
-                <%end%>
-                </ul>
-            </div>
-
-            <div class="genre-container">
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Worst Reviewed Genre</h2>
-                <ul class="list-group">
-                <%@worst_rated_genre.each do |genre|%>
-                <a href="<%genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Best Reviewed Genre</h2>
-                <ul class="list-group">
-                <%@top_rated_genre.each do |genre|%>
-                <a href="<%=genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
-                <%end%>
-                </ul>
-            </div>
-            <div class="card border-primary mb-3">
-                <br>
-                <h2 class="card-title text-center">Most Viewed Genre</h2>
-                <ul class="list-group">
-                <%@top_viewed_genre.each do |genre|%>
-                <a href="<%=genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
-                <%end%>
-                </ul>
-              </div>
-         </div>
+    
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Worst Reviewed Genre</h6>
+            <ul class="list-group">
+            <%@worst_rated_genre.each do |genre|%>
+            <a href="<%genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
+            <%end%>
+            </ul>
         </div>
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Best Reviewed Genre</h6>
+            <ul class="list-group">
+            <%@top_rated_genre.each do |genre|%>
+            <a href="<%=genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
+            <%end%>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm">
+        <div class="card border-primary mb-3">
+            <br>
+            <h6 class="card-title text-center">Most Viewed Genre</h6>
+            <ul class="list-group">
+            <%@top_viewed_genre.each do |genre|%>
+            <a href="<%=genre_path(genre)%>" class="list-group-item"><%=genre.name%></a>
+            <%end%>
+            </ul>
+        </div>
+    </div>
+
     </div>
 </div>
