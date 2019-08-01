@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       redirect_to @current_user
     else
       @user = User.new
-      render :new
+      render :new, layout: "edit_comment"
     end
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def edit
     find_user
     if logged_in? && authorized
-      render :edit
+      render layout: "edit_comment"
     else
       redirect_to user_path(@current_user)
     end
