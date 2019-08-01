@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :artists
-  resources :directors
-  resources :genres
-  resources :videos
-  resources :reviews
-  resources :users
+  resources :artists, only: [:index,:show]
+  resources :directors, only: [:index, :show]
+  resources :genres, only: [:index, :show]
+  resources :videos, only: [:index, :show]
+  resources :reviews, except: [:index]
+  resources :users, except: [:index]
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
