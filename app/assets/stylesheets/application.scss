@@ -16,7 +16,9 @@
  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
  @import "bootstrap";
 
-
+ body{
+     background-color: #ecebe8;
+ }
  .navbar {
     background-color: #204969;
     background-image: none;
@@ -82,3 +84,26 @@ a{
     color:grey;
 }
 
+//User profile page css
+.profile-image{
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-color: black;
+}
+
+.profile-image-container{
+    background-color:#204969;
+}
+
+.profile-reviewed-videos{
+    height: 400px;
+    width: 600px;
+    border-style: solid;
+    border-color: black;
+}
+
+.review-content{
+    border-style: solid;
+    border-color: black;
+}
