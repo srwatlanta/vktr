@@ -1,17 +1,33 @@
-<div class="container">
-    <%= image_tag @artist.img_url %>
-    <h2>Artist: <%= @artist.name%> </h1>
-
-    <p>Bio: <%= @artist.bio%></p>
-    <h4>Total Views: <%= @artist.total_views %> </h4>
-    <h4>Total Videos: <%= @artist.video_count %> </h4>
-    <h4>Average Review: <%= @artist.average_review %> </h4>
-
+<br>
+<div class="text-center">
+  <h1><%= @artist.name %></h1>
+  <div class="profile-image-container">
+  <%= image_tag(@artist.img_url, class:"profile-image") %>
+  </div>
+  <div class="container">
+  <p>Bio: <%= @artist.bio%></p>
+  <h4>Total Views: <%= @artist.total_views %></h4>
+  <h4>Total Videos: <%= @artist.video_count %> </h4>
+  <h4>Average Review: <%= @artist.average_review %> </h4>
+  </div>
 </div>
+<br>
 
-<% @artist.videos.each do |video| %>
-    <ul><ul><ul><ul><ul>
-    <li><%= link_to video.title, video %>
-    <%= link_to image_tag(video.img_url), video %></li>
-    </ul></ul></ul></ul></ul>
-<% end %>
+<div class="text-center">
+<h2>Videos by this artist:</h2>
+</div>
+<br>
+
+<div class="container">
+    <div class="card-columns">
+        <%@artist.videos.each do |video|%>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <%= link_to image_tag(video.img_url, class:"card-img-top"), video%>
+                <div class="card-body">
+                    <h4 class="card-title"><%= link_to video.title, video %></h2>
+                </div>
+            </div>
+
+        <%end%>
+    </div>
+</div>
