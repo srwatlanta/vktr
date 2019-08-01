@@ -3,6 +3,8 @@
     <h2>Artist: <%= @artist.name%> </h1>
 
     <p>Bio: <%= @artist.bio%></p>
+    <h4>Total Views: <%= @artist.total_views %> </h4>
+
 </div>
 
 <% @artist.videos.each do |video| %>
