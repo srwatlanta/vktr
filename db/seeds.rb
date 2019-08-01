@@ -222,3 +222,371 @@ Video.create(title: "We Found Love", img_url: "https://i.ytimg.com/vi/tg00YEETFz
 
 Video.create(title: "Vogue", img_url: "https://i.ytimg.com/vi/GuJQSAiODqI/maxresdefault.jpg", video_url: "https://www.youtube.com/watch?v=GuJQSAiODqI", artist_id: 26, genre_id: 1, director_id: 29)
 Video.create(title: "Living For Love", img_url: "https://i.ytimg.com/vi/u9h7Teiyvc8/maxresdefault.jpg", video_url: "https://www.youtube.com/watch?v=u9h7Teiyvc8", artist_id: 26, genre_id: 1, director_id: 29)
+
+
+review_data = [{
+    "id": 1,
+    "content": "After all the chaos and confusion, all you're left with is a headache.",
+    "kill_rating": 0,
+    "user_id": 14,
+    "video_id": 28
+  }, {
+    "id": 2,
+    "content": "It turned out to be about as mediocre as I feared, some surface pleasures notwithstanding.": 0,
+    "user_id": 6,
+    "video_id": 18
+  }, {
+    "id": 3,
+    "content": "ME! is not exactly an inventive music video. But it doesn't have to be. It delivers on what it promises, and not many big-studio music videos can claim the same.",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 32
+  }, {
+    "id": 4,
+    "content": "BRUNO MARS IS ON FIRE EVERY YEAR OF HIS CAREER",
+    "kill_rating": 1,
+    "user_id": 2,
+    "video_id": 38
+  }, {
+    "id": 5,
+    "content": "This is one of the greatest music videos ever made",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 36
+  }, {
+    "id": 6,
+    "content": "Great video. I think the dancing is supposed to distract us from what’s happening in the background because in America we make up these new trends which distracts us from the real problems in the world",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 16
+  }, {
+    "id": 7,
+    "content": "Anthony basically alergic to a shirt",
+    "kill_rating": 1,
+    "user_id": 16,
+    "video_id": 27
+  }, {
+    "id": 8,
+    "content": "The fact that he hired a Britney lookalike for this video is SAVAGE.",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 43
+  }, {
+    "id": 9,
+    "content": "You Need To Calm Down heightens the awfulness to a level where the crudeness is starkly illuminated for all to see.",
+    "kill_rating": 0,
+    "user_id": 11,
+    "video_id": 33
+  }, {
+    "id": 10,
+    "content": "Lady Gaga will always be the queen of weird music videos",
+    "kill_rating": 1,
+    "user_id": 19,
+    "video_id": 12
+  }, {
+    "id": 11,
+    "content": "Statues crumble because this video sucks",
+    "kill_rating": 0,
+    "user_id": 7,
+    "video_id": 44
+  }, {
+    "id": 12,
+    "content": "'ME!' is not for me! Sorry not sorry...",
+    "kill_rating": 0,
+    "user_id": 5,
+    "video_id": 32
+  }, {
+    "id": 13,
+    "content": "The direction for 'Bad Blood' is just plain bad.",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 34
+  }, {
+    "id": 14,
+    "content": "I love this video, haters need to be humble",
+    "kill_rating": 1,
+    "user_id": 4,
+    "video_id": 2
+  }, {
+    "id": 15,
+    "content": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "kill_rating": 0,
+    "user_id": 7,
+    "video_id": 30
+  }, {
+    "id": 16,
+    "content": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+    "kill_rating": 1,
+    "user_id": 1,
+    "video_id": 3
+  }, {
+    "id": 17,
+    "content": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+    "kill_rating": 1,
+    "user_id": 8,
+    "video_id": 32
+  }, {
+    "id": 18,
+    "content": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 27
+  }, {
+    "id": 19,
+    "content": "In congue. Etiam justo. Etiam pretium iaculis justo.",
+    "kill_rating": 0,
+    "user_id": 1,
+    "video_id": 3
+  }, {
+    "id": 20,
+    "content": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+    "kill_rating": 0,
+    "user_id": 18,
+    "video_id": 34
+  }, {
+    "id": 21,
+    "content": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "kill_rating": 1,
+    "user_id": 9,
+    "video_id": 1
+  }, {
+    "id": 22,
+    "content": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 26
+  }, {
+    "id": 23,
+    "content": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 46
+  }, {
+    "id": 24,
+    "content": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+    "kill_rating": 0,
+    "user_id": 17,
+    "video_id": 20
+  }, {
+    "id": 25,
+    "content": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+    "kill_rating": 0,
+    "user_id": 3,
+    "video_id": 26
+  }, {
+    "id": 26,
+    "content": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+    "kill_rating": 0,
+    "user_id": 3,
+    "video_id": 46
+  }, {
+    "id": 27,
+    "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 36
+  }, {
+    "id": 28,
+    "content": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "kill_rating": 1,
+    "user_id": 9,
+    "video_id": 4
+  }, {
+    "id": 29,
+    "content": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+    "kill_rating": 0,
+    "user_id": 1,
+    "video_id": 1
+  }, {
+    "id": 30,
+    "content": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "kill_rating": 1,
+    "user_id": 11,
+    "video_id": 20
+  }, {
+    "id": 31,
+    "content": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 33
+  }, {
+    "id": 32,
+    "content": "Fusce consequat. Nulla nisl. Nunc nisl.",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 45
+  }, {
+    "id": 33,
+    "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+    "kill_rating": 1,
+    "user_id": 6,
+    "video_id": 47
+  }, {
+    "id": 34,
+    "content": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "kill_rating": 1,
+    "user_id": 16,
+    "video_id": 26
+  }, {
+    "id": 35,
+    "content": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "kill_rating": 0,
+    "user_id": 19,
+    "video_id": 39
+  }, {
+    "id": 36,
+    "content": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 45
+  }, {
+    "id": 37,
+    "content": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "kill_rating": 1,
+    "user_id": 13,
+    "video_id": 33
+  }, {
+    "id": 38,
+    "content": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+    "kill_rating": 1,
+    "user_id": 18,
+    "video_id": 13
+  }, {
+    "id": 39,
+    "content": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 6
+  }, {
+    "id": 40,
+    "content": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "kill_rating": 1,
+    "user_id": 10,
+    "video_id": 39
+  }, {
+    "id": 41,
+    "content": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "kill_rating": 1,
+    "user_id": 3,
+    "video_id": 2
+  }, {
+    "id": 42,
+    "content": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    "kill_rating": 1,
+    "user_id": 2,
+    "video_id": 33
+  }, {
+    "id": 43,
+    "content": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "kill_rating": 0,
+    "user_id": 4,
+    "video_id": 13
+  }, {
+    "id": 44,
+    "content": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "kill_rating": 0,
+    "user_id": 9,
+    "video_id": 48
+  }, {
+    "id": 45,
+    "content": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 38
+  }, {
+    "id": 46,
+    "content": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "kill_rating": 0,
+    "user_id": 13,
+    "video_id": 28
+  }, {
+    "id": 47,
+    "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 31
+  }, {
+    "id": 48,
+    "content": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+    "kill_rating": 1,
+    "user_id": 6,
+    "video_id": 32
+  }, {
+    "id": 49,
+    "content": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "kill_rating": 0,
+    "user_id": 5,
+    "video_id": 41
+  }, {
+    "id": 50,
+    "content": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "kill_rating": 0,
+    "user_id": 2,
+    "video_id": 37
+  }, {
+    "id": 51,
+    "content": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "kill_rating": 1,
+    "user_id": 20,
+    "video_id": 47
+  }, {
+    "id": 52,
+    "content": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "kill_rating": 0,
+    "user_id": 12,
+    "video_id": 40
+  }, {
+    "id": 53,
+    "content": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+    "kill_rating": 0,
+    "user_id": 16,
+    "video_id": 32
+  }, {
+    "id": 54,
+    "content": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+    "kill_rating": 1,
+    "user_id": 8,
+    "video_id": 31
+  }, {
+    "id": 55,
+    "content": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 24
+  }, {
+    "id": 56,
+    "content": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 38
+  }, {
+    "id": 57,
+    "content": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "kill_rating": 1,
+    "user_id": 14,
+    "video_id": 30
+  }, {
+    "id": 58,
+    "content": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    "kill_rating": 0,
+    "user_id": 6,
+    "video_id": 16
+  }, {
+    "id": 59,
+    "content": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+    "kill_rating": 1,
+    "user_id": 3,
+    "video_id": 26
+  }, {
+    "id": 60,
+    "content": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+    "kill_rating": 0,
+    "user_id": 14,
+    "video_id": 12
+  }]
+review_data.each do |review|
+    Review.create(id: review[:id], content: review[:content], kill_rating: review[:kill_rating], user_id: review[:user_id], video_id: review[:video_id])
+    # t.text "content"
+    # t.integer "kill_rating"
+    # t.integer "user_id"
+    # t.integer "video_id"
