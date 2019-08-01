@@ -33,3 +33,5 @@ class Genre < ApplicationRecord
   #   end
   # end
 end
+
+# genre videos average rating sum and average
