@@ -39,6 +39,7 @@ class UsersController < ApplicationController
   def destroy
     find_user
     @user.destroy
+    reset_session
     redirect_to new_user_path
   end
 
