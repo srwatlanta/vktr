@@ -1,5 +1,17 @@
-<h1>List of Artists </h1>
-<% @artists.each do |artist|%>
-    <p><%= link_to image_tag(artist.img_url), artist%></p>
-    <p><%= link_to artist.name, artist %></p>
-<% end %>
+
+<div class="artist_index_title">
+    <h1 class="text-center">Artists</h1>
+</div>
+<div class="container">
+    <div class="card-columns">
+        <%@artists.each do |artist|%>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <%= link_to image_tag(artist.img_url, class:"card-img-top"), artist%>
+                <div class="card-body">
+                    <h4 class="card-title"><%= link_to artist.name, artist %></h2>
+                </div>
+            </div>
+
+        <%end%>
+    </div>
+</div>
