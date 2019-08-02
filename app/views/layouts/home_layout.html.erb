@@ -28,15 +28,20 @@
 
     
     <!-- Links -->
-    <a class="navbar-brand font-weight-bold" id="brandlogo">VKTR</a>
+    <a class="navbar-brand font-weight-bold" id="brandlogo" href="<%=root_path%>">VKTR</a>
     <div class="collapse navbar-collapse" id="collapse_target">
     
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="<%=root_path%>">Home</a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="<%=videos_path%>">Videos</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="<%=artists_path%>">Artists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=directors_path%>">Directors</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_genres" href="<%=genres_path%>">Genres
@@ -49,13 +54,6 @@
           <a class="dropdown-item" href="/genres/4">Electronic</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%=artists_path%>">Artists</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%=directors_path%>">Directors</a>
-      </li>
-
 
       <% if logged_in?%>
       <li class="nav-item">
